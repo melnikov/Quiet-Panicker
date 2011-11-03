@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99AFBBC314635E66002A4401 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AFBBC214635E66002A4401 /* UIKit.framework */; };
+		99AFBBC514635E66002A4401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AFBBC414635E66002A4401 /* Foundation.framework */; };
+		99AFBBC714635E66002A4401 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AFBBC614635E66002A4401 /* CoreGraphics.framework */; };
+		99AFBBCD14635E66002A4401 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBCB14635E66002A4401 /* InfoPlist.strings */; };
+		99AFBBD014635E66002A4401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AFBBCF14635E66002A4401 /* main.m */; };
+		99AFBBD314635E66002A4401 /* Quiet_PanickerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AFBBD214635E66002A4401 /* Quiet_PanickerAppDelegate.m */; };
+		99AFBBD614635E67002A4401 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBD414635E67002A4401 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		99AFBBBE14635E66002A4401 /* Quiet Panicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiet Panicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99AFBBC214635E66002A4401 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		99AFBBC414635E66002A4401 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		99AFBBC614635E66002A4401 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		99AFBBCA14635E66002A4401 /* Quiet Panicker-Info.plist */ = {isa = PBXFileReference; path = "Quiet Panicker-Info.plist"; sourceTree = "<group>"; };
+		99AFBBCC14635E66002A4401 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		99AFBBCE14635E66002A4401 /* Quiet Panicker-Prefix.pch */ = {isa = PBXFileReference; path = "Quiet Panicker-Prefix.pch"; sourceTree = "<group>"; };
+		99AFBBCF14635E66002A4401 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99AFBBD114635E66002A4401 /* Quiet_PanickerAppDelegate.h */ = {isa = PBXFileReference; path = Quiet_PanickerAppDelegate.h; sourceTree = "<group>"; };
+		99AFBBD214635E66002A4401 /* Quiet_PanickerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quiet_PanickerAppDelegate.m; sourceTree = "<group>"; };
+		99AFBBD514635E67002A4401 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99AFBBBB14635E66002A4401 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AFBBC314635E66002A4401 /* UIKit.framework in Frameworks */,
+				99AFBBC514635E66002A4401 /* Foundation.framework in Frameworks */,
+				99AFBBC714635E66002A4401 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99AFBBB314635E66002A4401 = {
+			isa = PBXGroup;
+			children = (
+				99AFBBC814635E66002A4401 /* Quiet Panicker */,
+				99AFBBC114635E66002A4401 /* Frameworks */,
+				99AFBBBF14635E66002A4401 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99AFBBBF14635E66002A4401 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99AFBBBE14635E66002A4401 /* Quiet Panicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99AFBBC114635E66002A4401 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99AFBBC214635E66002A4401 /* UIKit.framework */,
+				99AFBBC414635E66002A4401 /* Foundation.framework */,
+				99AFBBC614635E66002A4401 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99AFBBC814635E66002A4401 /* Quiet Panicker */ = {
+			isa = PBXGroup;
+			children = (
+				99AFBBD114635E66002A4401 /* Quiet_PanickerAppDelegate.h */,
+				99AFBBD214635E66002A4401 /* Quiet_PanickerAppDelegate.m */,
+				99AFBBD414635E67002A4401 /* MainWindow.xib */,
+				99AFBBC914635E66002A4401 /* Supporting Files */,
+			);
+			path = "Quiet Panicker";
+			sourceTree = "<group>";
+		};
+		99AFBBC914635E66002A4401 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99AFBBCA14635E66002A4401 /* Quiet Panicker-Info.plist */,
+				99AFBBCB14635E66002A4401 /* InfoPlist.strings */,
+				99AFBBCE14635E66002A4401 /* Quiet Panicker-Prefix.pch */,
+				99AFBBCF14635E66002A4401 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99AFBBBD14635E66002A4401 /* Quiet Panicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99AFBBD914635E67002A4401 /* Build configuration list for PBXNativeTarget "Quiet Panicker" */;
+			buildPhases = (
+				99AFBBBA14635E66002A4401 /* Sources */,
+				99AFBBBB14635E66002A4401 /* Frameworks */,
+				99AFBBBC14635E66002A4401 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Quiet Panicker";
+			productName = "Quiet Panicker";
+			productReference = 99AFBBBE14635E66002A4401 /* Quiet Panicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99AFBBB514635E66002A4401 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 99AFBBB814635E66002A4401 /* Build configuration list for PBXProject "Quiet Panicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 99AFBBB314635E66002A4401;
+			productRefGroup = 99AFBBBF14635E66002A4401 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99AFBBBD14635E66002A4401 /* Quiet Panicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99AFBBBC14635E66002A4401 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AFBBCD14635E66002A4401 /* InfoPlist.strings in Resources */,
+				99AFBBD614635E67002A4401 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99AFBBBA14635E66002A4401 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AFBBD014635E66002A4401 /* main.m in Sources */,
+				99AFBBD314635E66002A4401 /* Quiet_PanickerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		99AFBBCB14635E66002A4401 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99AFBBCC14635E66002A4401 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		99AFBBD414635E67002A4401 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99AFBBD514635E67002A4401 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99AFBBD714635E67002A4401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		99AFBBD814635E67002A4401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		99AFBBDA14635E67002A4401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quiet Panicker/Quiet Panicker-Prefix.pch";
+				INFOPLIST_FILE = "Quiet Panicker/Quiet Panicker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		99AFBBDB14635E67002A4401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quiet Panicker/Quiet Panicker-Prefix.pch";
+				INFOPLIST_FILE = "Quiet Panicker/Quiet Panicker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99AFBBB814635E66002A4401 /* Build configuration list for PBXProject "Quiet Panicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99AFBBD714635E67002A4401 /* Debug */,
+				99AFBBD814635E67002A4401 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99AFBBD914635E67002A4401 /* Build configuration list for PBXNativeTarget "Quiet Panicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99AFBBDA14635E67002A4401 /* Debug */,
+				99AFBBDB14635E67002A4401 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99AFBBB514635E66002A4401 /* Project object */;
+}
