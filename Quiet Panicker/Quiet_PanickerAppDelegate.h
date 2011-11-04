@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface Quiet_PanickerAppDelegate : NSObject <UIApplicationDelegate> {
-
+    NSMutableArray * servers;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, assign) NSMutableArray * servers;
 
 @end

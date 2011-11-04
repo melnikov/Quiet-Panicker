@@ -7,15 +7,35 @@
 //
 
 #import "Quiet_PanickerAppDelegate.h"
+#import "AddEditServerView.h"
+#import "DashBoardView.h"
+
 
 @implementation Quiet_PanickerAppDelegate
 
 
 @synthesize window=_window;
+@synthesize servers;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    self.servers = [[NSMutableArray alloc] initWithCapacity:0];
     // Override point for customization after application launch.
+    
+    if ([self.servers count] == 0)
+    {
+        AddEditServerView * view = [[UINavigationController alloc] initWithRootViewController: [[AddEditServerView alloc]initWithIndex:-1]];
+        [self.window setRootViewController:view];
+        [view release];
+    }
+    else
+    {
+       
+            DashBoardView * view = [[UINavigationController alloc] initWithRootViewController: [[DashBoardView alloc]init]];
+            [self.window setRootViewController:view];
+            [view release];
+    }
     [self.window makeKeyAndVisible];
     return YES;
 }

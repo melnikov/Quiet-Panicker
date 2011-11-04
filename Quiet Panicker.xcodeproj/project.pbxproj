@@ -14,6 +14,10 @@
 		99AFBBD014635E66002A4401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AFBBCF14635E66002A4401 /* main.m */; };
 		99AFBBD314635E66002A4401 /* Quiet_PanickerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AFBBD214635E66002A4401 /* Quiet_PanickerAppDelegate.m */; };
 		99AFBBD614635E67002A4401 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBD414635E67002A4401 /* MainWindow.xib */; };
+		99AFBBDF14635EC1002A4401 /* AddEditServerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AFBBDD14635EC1002A4401 /* AddEditServerView.m */; };
+		99AFBBE014635EC1002A4401 /* AddEditServerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBDE14635EC1002A4401 /* AddEditServerView.xib */; };
+		99AFBBE414636231002A4401 /* DashBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AFBBE214636231002A4401 /* DashBoardView.m */; };
+		99AFBBE514636231002A4401 /* DashBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBE314636231002A4401 /* DashBoardView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +25,19 @@
 		99AFBBC214635E66002A4401 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		99AFBBC414635E66002A4401 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99AFBBC614635E66002A4401 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		99AFBBCA14635E66002A4401 /* Quiet Panicker-Info.plist */ = {isa = PBXFileReference; path = "Quiet Panicker-Info.plist"; sourceTree = "<group>"; };
+		99AFBBCA14635E66002A4401 /* Quiet Panicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quiet Panicker-Info.plist"; sourceTree = "<group>"; };
 		99AFBBCC14635E66002A4401 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		99AFBBCE14635E66002A4401 /* Quiet Panicker-Prefix.pch */ = {isa = PBXFileReference; path = "Quiet Panicker-Prefix.pch"; sourceTree = "<group>"; };
+		99AFBBCE14635E66002A4401 /* Quiet Panicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quiet Panicker-Prefix.pch"; sourceTree = "<group>"; };
 		99AFBBCF14635E66002A4401 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		99AFBBD114635E66002A4401 /* Quiet_PanickerAppDelegate.h */ = {isa = PBXFileReference; path = Quiet_PanickerAppDelegate.h; sourceTree = "<group>"; };
+		99AFBBD114635E66002A4401 /* Quiet_PanickerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quiet_PanickerAppDelegate.h; sourceTree = "<group>"; };
 		99AFBBD214635E66002A4401 /* Quiet_PanickerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quiet_PanickerAppDelegate.m; sourceTree = "<group>"; };
 		99AFBBD514635E67002A4401 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		99AFBBDC14635EC1002A4401 /* AddEditServerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditServerView.h; sourceTree = "<group>"; };
+		99AFBBDD14635EC1002A4401 /* AddEditServerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditServerView.m; sourceTree = "<group>"; };
+		99AFBBDE14635EC1002A4401 /* AddEditServerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEditServerView.xib; sourceTree = "<group>"; };
+		99AFBBE114636231002A4401 /* DashBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardView.h; sourceTree = "<group>"; };
+		99AFBBE214636231002A4401 /* DashBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardView.m; sourceTree = "<group>"; };
+		99AFBBE314636231002A4401 /* DashBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashBoardView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,12 @@
 				99AFBBD214635E66002A4401 /* Quiet_PanickerAppDelegate.m */,
 				99AFBBD414635E67002A4401 /* MainWindow.xib */,
 				99AFBBC914635E66002A4401 /* Supporting Files */,
+				99AFBBE114636231002A4401 /* DashBoardView.h */,
+				99AFBBE214636231002A4401 /* DashBoardView.m */,
+				99AFBBE314636231002A4401 /* DashBoardView.xib */,
+				99AFBBDC14635EC1002A4401 /* AddEditServerView.h */,
+				99AFBBDD14635EC1002A4401 /* AddEditServerView.m */,
+				99AFBBDE14635EC1002A4401 /* AddEditServerView.xib */,
 			);
 			path = "Quiet Panicker";
 			sourceTree = "<group>";
@@ -142,6 +158,8 @@
 			files = (
 				99AFBBCD14635E66002A4401 /* InfoPlist.strings in Resources */,
 				99AFBBD614635E67002A4401 /* MainWindow.xib in Resources */,
+				99AFBBE014635EC1002A4401 /* AddEditServerView.xib in Resources */,
+				99AFBBE514636231002A4401 /* DashBoardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +172,8 @@
 			files = (
 				99AFBBD014635E66002A4401 /* main.m in Sources */,
 				99AFBBD314635E66002A4401 /* Quiet_PanickerAppDelegate.m in Sources */,
+				99AFBBDF14635EC1002A4401 /* AddEditServerView.m in Sources */,
+				99AFBBE414636231002A4401 /* DashBoardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +240,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiet Panicker/Quiet Panicker-Prefix.pch";
 				INFOPLIST_FILE = "Quiet Panicker/Quiet Panicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -233,6 +254,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quiet Panicker/Quiet Panicker-Prefix.pch";
 				INFOPLIST_FILE = "Quiet Panicker/Quiet Panicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
