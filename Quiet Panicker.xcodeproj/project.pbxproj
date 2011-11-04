@@ -211,7 +211,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -225,7 +225,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -261,6 +261,42 @@
 			};
 			name = Release;
 		};
+		99AFBBE61463668D002A4401 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				SDKROOT = iphoneos;
+			};
+			name = AdHoc;
+		};
+		99AFBBE71463668D002A4401 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Stex Group";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stex Group";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quiet Panicker/Quiet Panicker-Prefix.pch";
+				INFOPLIST_FILE = "Quiet Panicker/Quiet Panicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3E34E33D-8317-4B11-A7E9-FB461FE9DCF1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3E34E33D-8317-4B11-A7E9-FB461FE9DCF1";
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -268,6 +304,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99AFBBD714635E67002A4401 /* Debug */,
+				99AFBBE61463668D002A4401 /* AdHoc */,
 				99AFBBD814635E67002A4401 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -277,6 +314,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99AFBBDA14635E67002A4401 /* Debug */,
+				99AFBBE71463668D002A4401 /* AdHoc */,
 				99AFBBDB14635E67002A4401 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
