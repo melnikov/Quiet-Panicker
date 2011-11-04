@@ -7,7 +7,7 @@
 //
 
 #import "DashBoardView.h"
-
+#import "Quiet_PanickerAppDelegate.h"
 
 @implementation DashBoardView
 
@@ -34,6 +34,28 @@
     
     // Release any cached data, images, etc that aren't in use.
 }
+
+#pragma mark Table Functions
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 10;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [delegate.servers count]+1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    
+    int type = rand();
+    [cell.imageView setImage:[[UIImage imageNamed:@"red.png"]autorelease]];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    return cell;
+}
+
 
 #pragma mark - View lifecycle
 

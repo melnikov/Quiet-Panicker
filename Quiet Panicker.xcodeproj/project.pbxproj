@@ -18,6 +18,9 @@
 		99AFBBE014635EC1002A4401 /* AddEditServerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBDE14635EC1002A4401 /* AddEditServerView.xib */; };
 		99AFBBE414636231002A4401 /* DashBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AFBBE214636231002A4401 /* DashBoardView.m */; };
 		99AFBBE514636231002A4401 /* DashBoardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBE314636231002A4401 /* DashBoardView.xib */; };
+		99AFBBEC14636EB6002A4401 /* gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBE914636EB6002A4401 /* gray.png */; };
+		99AFBBED14636EB6002A4401 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBEA14636EB6002A4401 /* green.png */; };
+		99AFBBEE14636EB6002A4401 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 99AFBBEB14636EB6002A4401 /* red.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		99AFBBE114636231002A4401 /* DashBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardView.h; sourceTree = "<group>"; };
 		99AFBBE214636231002A4401 /* DashBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardView.m; sourceTree = "<group>"; };
 		99AFBBE314636231002A4401 /* DashBoardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashBoardView.xib; sourceTree = "<group>"; };
+		99AFBBE914636EB6002A4401 /* gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray.png; sourceTree = "<group>"; };
+		99AFBBEA14636EB6002A4401 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		99AFBBEB14636EB6002A4401 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		99AFBBC814635E66002A4401 /* Quiet Panicker */ = {
 			isa = PBXGroup;
 			children = (
+				99AFBBE814636EA2002A4401 /* Images */,
 				99AFBBD114635E66002A4401 /* Quiet_PanickerAppDelegate.h */,
 				99AFBBD214635E66002A4401 /* Quiet_PanickerAppDelegate.m */,
 				99AFBBD414635E67002A4401 /* MainWindow.xib */,
@@ -107,6 +114,16 @@
 				99AFBBCF14635E66002A4401 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99AFBBE814636EA2002A4401 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				99AFBBE914636EB6002A4401 /* gray.png */,
+				99AFBBEA14636EB6002A4401 /* green.png */,
+				99AFBBEB14636EB6002A4401 /* red.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +177,9 @@
 				99AFBBD614635E67002A4401 /* MainWindow.xib in Resources */,
 				99AFBBE014635EC1002A4401 /* AddEditServerView.xib in Resources */,
 				99AFBBE514636231002A4401 /* DashBoardView.xib in Resources */,
+				99AFBBEC14636EB6002A4401 /* gray.png in Resources */,
+				99AFBBED14636EB6002A4401 /* green.png in Resources */,
+				99AFBBEE14636EB6002A4401 /* red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

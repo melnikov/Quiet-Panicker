@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Quiet_PanickerAppDelegate.h"
 
 
-@interface DashBoardView : UIViewController {
-
+@interface DashBoardView : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+    UITableView * tableView;
+    Quiet_PanickerAppDelegate * delegate;
+    
 }
 
 
