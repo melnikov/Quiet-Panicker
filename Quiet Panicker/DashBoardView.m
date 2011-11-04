@@ -38,11 +38,11 @@
 #pragma mark Table Functions
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 10;
+    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [delegate.servers count]+1;
+    return [delegate.servers count]+10;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -63,6 +63,16 @@
 {
     [super viewDidLoad];
     self.title = @"Server Dashboard";
+    UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(didClickEditBarButton)];
+    
+    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(didClickAddBarButton)];
+
+    [self.navigationItem setRightBarButtonItem:right];
+    [right release];
+    
+    [self.navigationItem setLeftBarButtonItem:left];
+    [left release];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
