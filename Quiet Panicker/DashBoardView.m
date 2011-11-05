@@ -159,7 +159,7 @@
 // can start sending pings via -sendPingWithData:
 
 - (void)simplePing:(SimplePing *)pinger didFailWithError:(NSError *)error{
-    NSLog(@"ping fail");
+    NSLog(@"ping fail: %@",error);
 }
 
 // If this is called, the SimplePing object has failed.  By the time this callback is 
