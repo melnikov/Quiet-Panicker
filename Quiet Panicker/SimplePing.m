@@ -573,14 +573,17 @@ static void HostResolveCallback(CFHostRef theHost, CFHostInfoType typeInfo, cons
         self->_host = CFHostCreateWithName(NULL, (CFStringRef) self.hostName);
         assert(self->_host != NULL);
         
-        BOOL ss = CFHostSetClient(self->_host, HostResolveCallback, &context);
+        CFHostSetClient(self->_host, HostResolveCallback, &context);
         
         CFHostScheduleWithRunLoop(self->_host, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
         
         success = CFHostStartInfoResolution(self->_host, kCFHostAddresses, &streamError);
+        //CFArrayRef addresses = CFHostGetAddressing(self->_host, &success);
+
         if ( ! success ) {
             [self _didFailWithHostStreamError:streamError];
         }
+     
     }
 }
 

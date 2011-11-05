@@ -71,12 +71,24 @@
     }
 }
 
+-(void) sendPing{
+    [pinger sendPingWithData:nil];
+
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary * tmp = [delegate.servers objectAtIndex:indexPath.row];
     NSString * serverName = [tmp valueForKey:@"name"];
-    SimplePing * sp = [SimplePing simplePingWithHostName:@"demo.stexgroup.com"];
-    sp.delegate = self;
-    [sp start];
+    pinger = [SimplePing simplePingWithHostName:serverName];
+    pinger.delegate = self;
+    [pinger start];
+    
+  //  [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(sendPing) userInfo:nil repeats:YES];
+    
+   do {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    } while (pinger != nil);
+    
     int a;
     a=0;
     
@@ -141,6 +153,7 @@
 
 - (void)simplePing:(SimplePing *)pinger didStartWithAddress:(NSData *)address{
     NSLog(@"ping start");
+    [pinger sendPingWithData:nil];
 }
 // Called after the SimplePing has successfully started up.  After this callback, you 
 // can start sending pings via -sendPingWithData:
@@ -169,6 +182,7 @@
 
 - (void)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(NSData *)packet{
     NSLog(@"ping receive");
+    [pinger release];
 }
 
 // Called whenever the SimplePing object receives an ICMP packet that looks like 
@@ -177,7 +191,8 @@
 // the range of sequence numbers that we've sent out).
 
 - (void)simplePing:(SimplePing *)pinger didReceiveUnexpectedPacket:(NSData *)packet{
-    NSLog(@"ping receive wrong");
+  //  NSLog(@"ping receive wrong");
+     [pinger release];
 }
 
 // Called whenever the SimplePing object receives an ICMP packet that does not 
