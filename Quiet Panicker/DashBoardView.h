@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SimplePing.h"
 #import "Quiet_PanickerAppDelegate.h"
 
 
-@interface DashBoardView : UIViewController <UITableViewDelegate, UITableViewDataSource>{
-    UITableView * tableView;
+@interface DashBoardView : UIViewController <UITableViewDelegate, UITableViewDataSource,SimplePingDelegate>{
+    IBOutlet UITableView * tableView;
     Quiet_PanickerAppDelegate * delegate;
     
 }

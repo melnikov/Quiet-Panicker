@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		998B064A1464AB7400A3A003 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 998B06491464AB7400A3A003 /* SimplePing.m */; };
+		998B064D1464AD2500A3A003 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998B064C1464AD2500A3A003 /* CFNetwork.framework */; };
+		998B06571464B70B00A3A003 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998B06561464B70B00A3A003 /* MobileCoreServices.framework */; };
 		99AFBBC314635E66002A4401 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AFBBC214635E66002A4401 /* UIKit.framework */; };
 		99AFBBC514635E66002A4401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AFBBC414635E66002A4401 /* Foundation.framework */; };
 		99AFBBC714635E66002A4401 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AFBBC614635E66002A4401 /* CoreGraphics.framework */; };
@@ -24,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		998B06481464AB7400A3A003 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		998B06491464AB7400A3A003 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		998B064C1464AD2500A3A003 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		998B06561464B70B00A3A003 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		99AFBBBE14635E66002A4401 /* Quiet Panicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiet Panicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99AFBBC214635E66002A4401 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		99AFBBC414635E66002A4401 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998B06571464B70B00A3A003 /* MobileCoreServices.framework in Frameworks */,
+				998B064D1464AD2500A3A003 /* CFNetwork.framework in Frameworks */,
 				99AFBBC314635E66002A4401 /* UIKit.framework in Frameworks */,
 				99AFBBC514635E66002A4401 /* Foundation.framework in Frameworks */,
 				99AFBBC714635E66002A4401 /* CoreGraphics.framework in Frameworks */,
@@ -63,6 +72,8 @@
 		99AFBBB314635E66002A4401 = {
 			isa = PBXGroup;
 			children = (
+				998B06561464B70B00A3A003 /* MobileCoreServices.framework */,
+				998B064C1464AD2500A3A003 /* CFNetwork.framework */,
 				99AFBBC814635E66002A4401 /* Quiet Panicker */,
 				99AFBBC114635E66002A4401 /* Frameworks */,
 				99AFBBBF14635E66002A4401 /* Products */,
@@ -91,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				99AFBBE814636EA2002A4401 /* Images */,
+				998B06481464AB7400A3A003 /* SimplePing.h */,
+				998B06491464AB7400A3A003 /* SimplePing.m */,
 				99AFBBD114635E66002A4401 /* Quiet_PanickerAppDelegate.h */,
 				99AFBBD214635E66002A4401 /* Quiet_PanickerAppDelegate.m */,
 				99AFBBD414635E67002A4401 /* MainWindow.xib */,
@@ -194,6 +207,7 @@
 				99AFBBD314635E66002A4401 /* Quiet_PanickerAppDelegate.m in Sources */,
 				99AFBBDF14635EC1002A4401 /* AddEditServerView.m in Sources */,
 				99AFBBE414636231002A4401 /* DashBoardView.m in Sources */,
+				998B064A1464AB7400A3A003 /* SimplePing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +352,7 @@
 				99AFBBDB14635E67002A4401 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

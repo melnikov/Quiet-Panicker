@@ -21,6 +21,13 @@
 {
     
     self.servers = [[NSMutableArray alloc] initWithCapacity:0];
+
+    [self.servers addObject:[[[NSDictionary alloc] initWithObjectsAndKeys:@"192.168.1.38", @"name", nil] retain]];
+
+        [self.servers addObject:[[[NSDictionary alloc] initWithObjectsAndKeys:@"192.168.1.25", @"name", nil] retain]];
+    
+        [self.servers addObject:[[[NSDictionary alloc] initWithObjectsAndKeys:@"192.168.1.100", @"name", nil] retain]];
+    
     // Override point for customization after application launch.
     
     if ([self.servers count] == 0)

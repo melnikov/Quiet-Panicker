@@ -13,6 +13,6 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, assign) NSMutableArray * servers;
+@property (nonatomic, retain) NSMutableArray * servers;
 
 @end

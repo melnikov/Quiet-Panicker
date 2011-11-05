@@ -47,13 +47,18 @@
 #pragma mark Buttons
 
 -(void) doSaveServer{
+    Quiet_PanickerAppDelegate * delegate = [[UIApplication sharedApplication]delegate];
+    NSMutableDictionary * tmp= [[NSMutableDictionary alloc] init];
+    [tmp setValue:edName.text forKey:@"name"];
     if (self.index >=0)
     {
+        [delegate.servers replaceObjectAtIndex:index withObject:[tmp retain]];
+
         [self.navigationController popViewControllerAnimated:YES];
         return;
     }
     else{
-        Quiet_PanickerAppDelegate * delegate = [[UIApplication sharedApplication]delegate];
+       [delegate.servers addObject:[tmp retain]];
         [delegate.window setRootViewController:[[UINavigationController alloc] initWithRootViewController:[[DashBoardView alloc] init]]];
     }
     
@@ -64,6 +69,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if (index>=0)
+    {
+        Quiet_PanickerAppDelegate * delegate = [[UIApplication sharedApplication]delegate];
+        NSDictionary * tmp= [delegate.servers objectAtIndex:index];
+        edName.text = [tmp valueForKey:@"name"];
+    }
     UIBarButtonItem * saveButton = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(doSaveServer)];
     [self.navigationItem setRightBarButtonItem:saveButton];
     [saveButton release];

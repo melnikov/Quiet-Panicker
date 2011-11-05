@@ -12,7 +12,15 @@
 @interface AddEditServerView : UIViewController {
  
     int index;
+    IBOutlet UITextField * edName;
+    IBOutlet UISwitch * swWOL;
+    
 }
+
 @property (nonatomic,readwrite) int index;
+@property (nonatomic, retain) IBOutlet UITextField * edName;
+@property (nonatomic, retain) IBOutlet UISwitch * swWOL;
+
 -(id) initWithIndex:(int) idx;
+
 @end

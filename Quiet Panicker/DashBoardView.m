@@ -7,7 +7,9 @@
 //
 
 #import "DashBoardView.h"
+#import "AddEditServerView.h"
 #import "Quiet_PanickerAppDelegate.h"
+#import "SimplePing.h"
 
 @implementation DashBoardView
 
@@ -42,7 +44,9 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [delegate.servers count]+10;
+    int a = [delegate.servers count]; 
+    
+    return [delegate.servers count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -50,10 +54,44 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     
-    int type = rand();
+    NSDictionary * server = [delegate.servers objectAtIndex:indexPath.row];
+    [cell.textLabel setText:[server objectForKey:@"name"]];
+    [cell.detailTextLabel setText:@"Inactive"];
     [cell.imageView setImage:[[UIImage imageNamed:@"red.png"]autorelease]];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
+}
+
+
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [delegate.servers removeObjectAtIndex:indexPath.row];
+        [tableView reloadData];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary * tmp = [delegate.servers objectAtIndex:indexPath.row];
+    NSString * serverName = [tmp valueForKey:@"name"];
+    SimplePing * sp = [SimplePing simplePingWithHostName:@"demo.stexgroup.com"];
+    sp.delegate = self;
+    [sp start];
+    int a;
+    a=0;
+    
+}
+
+#pragma mark Buttons
+
+-(void) didClickAddBarButton{
+    AddEditServerView * ev = [[AddEditServerView alloc] initWithIndex:-1];
+    [self.navigationController pushViewController:ev animated:YES];
+    [ev release];
+}
+
+-(void) didClickEditBarButton{
+    [tableView setEditing:YES animated:YES];
 }
 
 
@@ -62,6 +100,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    delegate = [[UIApplication sharedApplication] delegate];
     self.title = @"Server Dashboard";
     UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(didClickEditBarButton)];
     
@@ -70,7 +109,7 @@
     [self.navigationItem setRightBarButtonItem:right];
     [right release];
     
-    [self.navigationItem setLeftBarButtonItem:left];
+    [self.navigationItem setLeftBarButtonItem:self.editButtonItem];
     [left release];
     
     // Do any additional setup after loading the view from its nib.
@@ -83,10 +122,67 @@
     // e.g. self.myOutlet = nil;
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [tableView reloadData];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+-(void) setEditing:(BOOL)editing animated:(BOOL)animated{
+    [tableView setEditing:editing animated:animated];
+    [super setEditing:editing animated:animated];
+}
+
+#pragma mark SimplePing delegate methods
+
+- (void)simplePing:(SimplePing *)pinger didStartWithAddress:(NSData *)address{
+    NSLog(@"ping start");
+}
+// Called after the SimplePing has successfully started up.  After this callback, you 
+// can start sending pings via -sendPingWithData:
+
+- (void)simplePing:(SimplePing *)pinger didFailWithError:(NSError *)error{
+    NSLog(@"ping fail");
+}
+
+// If this is called, the SimplePing object has failed.  By the time this callback is 
+// called, the object has stopped (that is, you don't need to call -stop yourself).
+
+// IMPORTANT: On the send side the packet does not include an IP header. 
+// On the receive side, it does.  In that case, use +[SimplePing icmpInPacket:] 
+// to find the ICMP header within the packet.
+
+- (void)simplePing:(SimplePing *)pinger didSendPacket:(NSData *)packet{
+    NSLog(@"ping send");
+}
+// Called whenever the SimplePing object has successfully sent a ping packet. 
+
+- (void)simplePing:(SimplePing *)pinger didFailToSendPacket:(NSData *)packet error:(NSError *)error{
+    NSLog(@"ping fail to send");
+}
+
+// Called whenever the SimplePing object tries and fails to send a ping packet.
+
+- (void)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(NSData *)packet{
+    NSLog(@"ping receive");
+}
+
+// Called whenever the SimplePing object receives an ICMP packet that looks like 
+// a response to one of our pings (that is, has a valid ICMP checksum, has 
+// an identifier that matches our identifier, and has a sequence number in 
+// the range of sequence numbers that we've sent out).
+
+- (void)simplePing:(SimplePing *)pinger didReceiveUnexpectedPacket:(NSData *)packet{
+    NSLog(@"ping receive wrong");
+}
+
+// Called whenever the SimplePing object receives an ICMP packet that does not 
+// look like a response to one of our pings.
+
+
 
 @end
